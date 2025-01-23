@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: kata
+  sql:
+    init:
+      platform: postgrese
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://db:5432/kata
+    username: postgres
+    password: postgres
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+    properties:
+      hibernate.format_sql: true
+  docker:
+    compose:
+      enabled: false
+
+
+server:
+  port: 8083
+
+
+delivery:
+  time-slots:
+    DRIVE: 09:00-10:00,10:00-11:00,11:00-12:00
+    DELIVERY: 14:00-15:00,15:00-16:00,16:00-17:00
+    DELIVERY_TODAY: 17:00-18:00,18:00-19:00
+    DELIVERY_ASAP: ASAP
