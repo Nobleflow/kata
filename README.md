@@ -32,7 +32,7 @@ Kata is a Spring Boot application that provides an order management system with 
 
 ## Technologies
 
-- **Java 17**
+- **Java 17** (minimum required version)
 - **Spring Boot 3.4.1**
   - Spring Web & WebFlux
   - Spring Data JPA
