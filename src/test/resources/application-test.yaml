@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: kata-test
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password: 
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: false
+  h2:
+    console:
+      enabled: false
+
+delivery:
+  time-slots:
+    DRIVE: 09:00-10:00,10:00-11:00,11:00-12:00
+    DELIVERY: 14:00-15:00,15:00-16:00,16:00-17:00
+    DELIVERY_TODAY: 17:00-18:00,18:00-19:00
+    DELIVERY_ASAP: ASAP
